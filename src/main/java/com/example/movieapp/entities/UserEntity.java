@@ -1,25 +1,20 @@
 package com.example.movieapp.entities;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
+@Table(name="Uzytkownik")
 public class UserEntity {
     @Id
-            @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+    @Column(name="Login", length = 100, nullable = false, unique = true)
     private String login;
+    @Column(name="Hasło", length = 100, nullable = false)
     private String password;
+    @Column(name="Email", length = 100, nullable = false, unique = true)
     private String email;
     public UserEntity (long id, String login, String password, String email){
-        this.id = id;
-        this.login = login;
-        this.password = password;
-        this.email = email;
-    }
-    public UserEntity (String login, String password, String email){
         this.id = id;
         this.login = login;
         this.password = password;
