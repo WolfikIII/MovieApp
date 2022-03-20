@@ -1,0 +1,1 @@
+Aplication created in JAVA and SPRING BOOT framework. Includes a microservice for managing users and videos. The app is connected to MySQL database. 
